@@ -327,9 +327,9 @@ QwInfoMsgDlg = 575,416,750,250
 saveSigDlg = 684,262,551,386
 QwUserAskDlg = 788,528,324,128
 restoreSigDlg = 684,318,551,438
-openFileDlg = 1739,797,602,483
 QwWarnMsgDlg = 480,744,600,250
-qWaveSignalDialog = 1428,951,800,479
+openFileDlg = 1739,797,602,483
+qWaveSignalDialog = 1640,799,800,479
 [Session Cache]
 1 = string (session file name)
 2 = string (session file name)
@@ -540,7 +540,7 @@ waveform_vertical_scroll_bar = TRUE
 scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
-getSignalForm = 1428 869 800 479 164 381 390 89
+getSignalForm = 1640 799 800 479 164 381 390 89
 viewPort = 1080 442 1920 1111 241 207
 signalSpacing = 5
 digitalSignalHeight = 15
