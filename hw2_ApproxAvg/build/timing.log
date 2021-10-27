@@ -1,0 +1,167 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CS
+Version: Q-2019.12
+Date   : Wed Oct 27 14:01:48 2021
+****************************************
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: reg_x_reg_8__1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Y[8] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CS                 G5K                   fsa0m_a_generic_core_ss1p62v125c
+  CS_DW01_add_9      enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  CS_DW01_add_17     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  reg_x_reg_8__1_/CK (QDFFRBN)                            0.00       0.50 r
+  reg_x_reg_8__1_/Q (QDFFRBN)                             0.60       1.10 r
+  add_7_root_add_0_root_add_18_8/B_1_ (CS_DW01_add_15)
+                                                          0.00       1.10 r
+  add_7_root_add_0_root_add_18_8/U1_1/S (FA1)             0.57       1.68 f
+  add_7_root_add_0_root_add_18_8/SUM_1_ (CS_DW01_add_15)
+                                                          0.00       1.68 f
+  U359/S (FA1)                                            0.54       2.22 f
+  add_2_root_add_0_root_add_18_8/A_1_ (CS_DW01_add_13)
+                                                          0.00       2.22 f
+  add_2_root_add_0_root_add_18_8/U1_1/S (FA1)             0.65       2.87 f
+  add_2_root_add_0_root_add_18_8/SUM_1_ (CS_DW01_add_13)
+                                                          0.00       2.87 f
+  add_0_root_add_0_root_add_18_8/B_1_ (CS_DW01_add_9)     0.00       2.87 f
+  add_0_root_add_0_root_add_18_8/U1_1/CO (FA1S)           0.50       3.37 f
+  add_0_root_add_0_root_add_18_8/U1_2/CO (FA1S)           0.49       3.86 f
+  add_0_root_add_0_root_add_18_8/U1_3/CO (FA1S)           0.49       4.36 f
+  add_0_root_add_0_root_add_18_8/U1_4/CO (FA1S)           0.49       4.85 f
+  add_0_root_add_0_root_add_18_8/U1_5/CO (FA1S)           0.49       5.35 f
+  add_0_root_add_0_root_add_18_8/U1_6/CO (FA1S)           0.49       5.84 f
+  add_0_root_add_0_root_add_18_8/U1_7/CO (FA1S)           0.49       6.33 f
+  add_0_root_add_0_root_add_18_8/U1_8/CO (FA1S)           0.51       6.84 f
+  add_0_root_add_0_root_add_18_8/U1_9/CO (FA1)            0.40       7.25 f
+  add_0_root_add_0_root_add_18_8/U3/O (XOR2HS)            0.17       7.42 f
+  add_0_root_add_0_root_add_18_8/SUM[10] (CS_DW01_add_9)
+                                                          0.00       7.42 f
+  U212/O (BUF3)                                           0.32       7.74 f
+  U716/O (AN2)                                            0.28       8.02 f
+  U718/O (AN2B1S)                                         0.13       8.15 r
+  U230/O (MOAI1)                                          0.30       8.45 r
+  U732/O (OAI22S)                                         0.17       8.62 f
+  U527/O (AN2)                                            0.38       9.00 f
+  U362/O (ND2S)                                           0.21       9.21 r
+  U458/O (INV1S)                                          0.15       9.36 f
+  U304/O (ND2S)                                           0.18       9.54 r
+  U244/O (AN2S)                                           0.25       9.79 r
+  U587/O (MAOI1)                                          0.16       9.95 f
+  U245/O (ND2S)                                           0.21      10.16 r
+  U757/O (OAI112HS)                                       0.15      10.30 f
+  U762/O (MOAI1S)                                         0.31      10.61 r
+  U222/O (AN2T)                                           0.41      11.02 r
+  U199/O (MOAI1S)                                         0.28      11.30 r
+  U187/O (BUF2)                                           0.21      11.51 r
+  U196/O (ND2)                                            0.12      11.64 f
+  U351/O (AN2S)                                           0.23      11.86 f
+  U549/O (MAOI1)                                          0.25      12.11 r
+  U789/O (OAI112HS)                                       0.16      12.27 f
+  U250/O (MOAI1)                                          0.33      12.61 f
+  U243/O (ND2T)                                           0.22      12.83 r
+  U200/O (INV3)                                           0.15      12.98 f
+  U504/O (AOI22S)                                         0.27      13.25 r
+  U261/O (INV1S)                                          0.18      13.42 f
+  U815/O (ND2)                                            0.16      13.58 r
+  U562/O (AN2)                                            0.23      13.81 r
+  U561/O (MAOI1)                                          0.16      13.97 f
+  U816/O (ND2)                                            0.16      14.13 r
+  U817/O (OAI112HS)                                       0.14      14.27 f
+  U823/O (MOAI1S)                                         0.30      14.57 r
+  U224/O (AN2T)                                           0.42      14.99 r
+  U530/O (MOAI1S)                                         0.29      15.27 r
+  U176/O (BUF2)                                           0.21      15.48 r
+  U848/O (ND2)                                            0.12      15.61 f
+  U559/O (AN2)                                            0.24      15.85 f
+  U558/O (MAOI1)                                          0.22      16.07 r
+  U849/O (ND2)                                            0.12      16.19 f
+  U850/O (OAI112HS)                                       0.13      16.32 r
+  U241/O (MOAI1)                                          0.18      16.50 f
+  U227/O (ND2F)                                           0.19      16.70 r
+  U202/O (INV3)                                           0.15      16.84 f
+  U512/O (AOI22S)                                         0.27      17.11 r
+  U260/O (INV1S)                                          0.17      17.28 f
+  U880/O (ND2)                                            0.16      17.44 r
+  U564/O (AN2)                                            0.23      17.67 r
+  U563/O (MAOI1)                                          0.16      17.82 f
+  U881/O (ND2)                                            0.16      17.98 r
+  U882/O (OAI112HS)                                       0.14      18.12 f
+  U888/O (MOAI1S)                                         0.30      18.42 r
+  U223/O (AN2T)                                           0.41      18.84 r
+  U209/O (MOAI1S)                                         0.28      19.12 r
+  U182/O (BUF2)                                           0.21      19.34 r
+  U203/O (ND2)                                            0.12      19.46 f
+  U560/O (AN2)                                            0.27      19.73 f
+  U226/O (MAOI1H)                                         0.19      19.92 r
+  U369/O (AO12S)                                          0.28      20.20 r
+  U167/O (MOAI1H)                                         0.14      20.35 f
+  U166/O (ND2F)                                           0.18      20.53 r
+  U211/O (INV3)                                           0.15      20.67 f
+  U520/O (AOI22S)                                         0.27      20.94 r
+  U259/O (INV1S)                                          0.17      21.11 f
+  U944/O (ND2)                                            0.16      21.27 r
+  U566/O (AN2)                                            0.23      21.50 r
+  U565/O (MAOI1)                                          0.16      21.65 f
+  U945/O (ND2)                                            0.16      21.81 r
+  U946/O (OAI112HS)                                       0.14      21.95 f
+  U952/O (MOAI1S)                                         0.30      22.26 r
+  U186/O (AN2T)                                           0.41      22.66 r
+  U544/O (MOAI1S)                                         0.28      22.94 r
+  U264/O (INV1S)                                          0.23      23.17 f
+  U352/O (AN2S)                                           0.28      23.45 f
+  U552/O (MAOI1)                                          0.25      23.70 r
+  U983/O (OAI112HS)                                       0.16      23.86 f
+  U984/O (MOAI1S)                                         0.33      24.19 f
+  U221/O (AN2P)                                           0.43      24.62 f
+  U231/O (MOAI1)                                          0.37      24.99 f
+  add_37_2/B[1] (CS_DW01_add_17)                          0.00      24.99 f
+  add_37_2/U4/O (OA12P)                                   0.25      25.25 f
+  add_37_2/U2/O (ND2)                                     0.08      25.33 r
+  add_37_2/U1/O (AN2)                                     0.29      25.61 r
+  add_37_2/U6/O (ND2P)                                    0.06      25.68 f
+  add_37_2/U5/O (MOAI1H)                                  0.24      25.91 f
+  add_37_2/U1_3/CO (FA1)                                  0.35      26.27 f
+  add_37_2/U1_4/CO (FA1S)                                 0.47      26.74 f
+  add_37_2/U1_5/CO (FA1S)                                 0.49      27.23 f
+  add_37_2/U1_6/CO (FA1S)                                 0.51      27.74 f
+  add_37_2/U1_7/CO (FA1)                                  0.38      28.12 f
+  add_37_2/U1_8/CO (FA1S)                                 0.49      28.61 f
+  add_37_2/U1_9/CO (FA1)                                  0.39      28.99 f
+  add_37_2/U1_10/CO (FA1)                                 0.34      29.33 f
+  add_37_2/U1_11/O (XOR3)                                 0.34      29.67 f
+  add_37_2/SUM_11_ (CS_DW01_add_17)                       0.00      29.67 f
+  U169/O (BUF6CK)                                         0.21      29.88 f
+  Y[8] (out)                                              0.00      29.88 f
+  data arrival time                                                 29.88
+
+  clock clk (rise edge)                                  30.00      30.00
+  clock network delay (ideal)                             0.50      30.50
+  clock uncertainty                                      -0.10      30.40
+  output external delay                                  -0.50      29.90
+  data required time                                                29.90
+  --------------------------------------------------------------------------
+  data required time                                                29.90
+  data arrival time                                                -29.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+1
