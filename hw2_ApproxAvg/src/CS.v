@@ -18,10 +18,10 @@ assign abs_avg_near=abs(reg_x[most_near],sum/9);
 
 always@(posedge clk, posedge reset) begin
 	if(reset) begin
-		for(int i=0;i<N;++i) reg_x[i]<=0;
+		for(i=0;i<N;++i) reg_x[i]<=0;
 	end
 	else begin
-		for(int i=1;i<N;++i) reg_x[i]<=reg_x[i-1];
+		for(i=1;i<N;++i) reg_x[i]<=reg_x[i-1];
 		reg_x[0]<=X;
 	end
 end
