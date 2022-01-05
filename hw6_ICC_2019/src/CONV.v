@@ -1,16 +1,16 @@
 `define SIDE_MAX {~6'd0}
 
 `define MAX_2(a,b) ((a>b)? a:b)
-`define MUL(a,b) (a*b)
+`define MUL(a,b) ($signed(a)*$signed(b))
 `define KER0_CONV \
-	(`MUL(tmp[0][0],20'h0A89E)+`MUL(tmp[0][1],20'h092D5)+`MUL(tmp[0][2],20'h06D43)+ \
-	`MUL(tmp[1][0],20'h01004)+`MUL(tmp[1][1],20'hF8F71)+`MUL(tmp[1][2],20'hF6E54)+ \
-	`MUL(tmp[2][0],20'hFA6D7)+`MUL(tmp[2][1],20'hFC834)+`MUL(tmp[2][2],20'hFAC19)+40'h0000001310)
+	(`MUL(tmp[0][0],20'sh0A89E)+`MUL(tmp[0][1],20'sh092D5)+`MUL(tmp[0][2],20'sh06D43)+ \
+	 `MUL(tmp[1][0],20'sh01004)+`MUL(tmp[1][1],20'shF8F71)+`MUL(tmp[1][2],20'shF6E54)+ \
+	 `MUL(tmp[2][0],20'shFA6D7)+`MUL(tmp[2][1],20'shFC834)+`MUL(tmp[2][2],20'shFAC19)+40'sh0013100000)
 
 `define KER1_CONV \
-	(`MUL(tmp[0][0],20'hFDB55)+`MUL(tmp[0][1],20'h02992)+`MUL(tmp[0][2],20'hFC994)+ \
-	`MUL(tmp[1][0],20'h050FD)+`MUL(tmp[1][1],20'h02F20)+`MUL(tmp[1][2],20'h0202D)+ \
-	`MUL(tmp[2][0],20'h03BD7)+`MUL(tmp[2][1],20'hFD369)+`MUL(tmp[2][2],20'h05E68)+40'hFFFFFF7295)
+	(`MUL(tmp[0][0],20'shFDB55)+`MUL(tmp[0][1],20'sh02992)+`MUL(tmp[0][2],20'shFC994)+ \
+	 `MUL(tmp[1][0],20'sh050FD)+`MUL(tmp[1][1],20'sh02F20)+`MUL(tmp[1][2],20'sh0202D)+ \
+	 `MUL(tmp[2][0],20'sh03BD7)+`MUL(tmp[2][1],20'shFD369)+`MUL(tmp[2][2],20'sh05E68)+40'shFF72950000)
 
 module CONV (
 	input clk,
@@ -117,7 +117,7 @@ always @(posedge clk,posedge reset) begin
 							cwr<=1'b0;
 							stage<=2'd3;
 						end
-						else if(cwr) {caddr_wr,is_kernel0}<={caddr_wr,is_kernel0}+21'd1;
+						else if(cwr) caddr_wr<=caddr_wr+21'd1;
 						sync_req<=1'b0;
 						cwr<=1'b0;
 					end
@@ -149,8 +149,8 @@ always @(posedge clk,posedge reset) begin
 				end
 				else reg_col<=reg_col+1;
 
-				if(out_border) tmp[reg_col][reg_row]<=20'd0;
-				else tmp[reg_col][reg_row]<=(stage==2'd2)? idata:cdata_rd;
+				if(out_border) tmp[reg_row][reg_col]<=20'd0;
+				else tmp[reg_row][reg_col]<=(stage==2'd2)? idata:cdata_rd;
 			end
 		endcase
 	end
@@ -165,7 +165,7 @@ always @(*) begin
 			caddr_rd={caddr_wr[11:6]+{4'd0,reg_row}-6'd1,caddr_wr[5:0]+{4'd0,reg_col}-6'd1};
 			out_border=((caddr_wr[5:0]==0&&reg_col==0)||(caddr_wr[5:0]==`SIDE_MAX&&reg_col==2'd2)||(caddr_wr[11:6]==0&&reg_row==0)||(caddr_wr[11:6]==`SIDE_MAX&&reg_row==2'd2));
 			reg_MAX=2'd2;
-			cdata_wr=(tmp_ans[39])? 0:tmp_ans[35:16]+tmp_ans[15];//RELU+round
+			cdata_wr=(tmp_ans[39])? 20'd0:tmp_ans[35:16]+tmp_ans[15];//RELU+round
 			csel=(is_kernel0)? 3'b001:3'b010;
 		end
 		2'd1: begin
@@ -180,7 +180,7 @@ always @(*) begin
 			out_border=1'b0;
 			reg_MAX=2'd0;
 			cdata_wr=tmp[0][0];
-			csel=(crd)? ((is_kernel0)? 3'b011:3'b100):3'b101;
+			csel=(crd)? ((caddr_wr[0])? 3'b100:3'b011):3'b101;
 		end
 	endcase
 end
