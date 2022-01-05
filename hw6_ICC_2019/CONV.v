@@ -11,11 +11,11 @@
 
 `define MAX 6'b111111
 
-module KER1_CONV(
-	input [19:0]in_data[9],
-	output [19:0]out_data
-);
-endmodule
+//module KER1_CONV(
+//	input [19:0]in_data[9],
+//	output [19:0]out_data
+//);
+//endmodule
 
 module CONV (
     input clk,
@@ -31,7 +31,7 @@ module CONV (
     output logic [11:0] iaddr,
     output [11:0] caddr_rd,
     output [11:0] caddr_wr,
-    output [19:0] cdata_wr
+    output logic [19:0] cdata_wr
 );
 
 // request data
@@ -88,7 +88,6 @@ always_ff @(posedge clk,posedge reset) begin
 	else begin
 		case(calc_type)
 			CONV:begin
-				crd<=!last_col;
 				data_source<=(last_row)? ZERO:IMAGE;
 				// deal last row or col
 				last_col<=(col_counter==`MAX)? ~last_col:last_col;
@@ -98,9 +97,14 @@ always_ff @(posedge clk,posedge reset) begin
 				if((row_counter>0||last_row)&&(col_counter>1||last_col)) begin
 					if(last_col) caddr_wr<={row_counter-1,out_col_counter};
 					out_col_counter<=out_col_counter+1;
+					cdata_wr<=`KER1_CONV()
 					cwr<=1'b1;
 				end
-				else cwr<=1'b0;
+				// loading data
+				else begin
+					cwr<=1'b0;
+					crd<=1'b1;
+				end
 			end
 			POOL:begin
 			end
