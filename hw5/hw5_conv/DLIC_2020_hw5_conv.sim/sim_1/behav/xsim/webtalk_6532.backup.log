@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Sep 22 22:14:26 2021
+# Process ID: 6532
+# Current directory: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.sim/sim_1/behav/xsim/xsim.dir/top_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.sim/sim_1/behav/xsim/xsim.dir/top_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 109.164 ; gain = 17.609
+INFO: [Common 17-206] Exiting Webtalk at Wed Sep 22 22:14:38 2021...

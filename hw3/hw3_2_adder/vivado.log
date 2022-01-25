@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jul 16 16:39:59 2021
+# Process ID: 12580
+# Current directory: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw3_2_adder
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13568 C:\Users\micha\Documents\Vivado_ws\DLIC_2020_hw3_2_adder\DLIC_2020_hw3_2_adder.xpr
+# Log file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw3_2_adder/vivado.log
+# Journal file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw3_2_adder\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw3_2_adder/DLIC_2020_hw3_2_adder.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw3_2_adder/DLIC_2020_hw3_2_adder.srcs/sources_1/new'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 826.844 ; gain = 183.930
+update_compile_order -fileset sources_1
+reset_run synth_1
+reset_simulation -simset sim_1 -mode behavioral
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 16 16:41:02 2021...

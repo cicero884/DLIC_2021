@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jul 16 18:00:22 2021
+# Process ID: 3284
+# Current directory: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12788 C:\Users\micha\Documents\Vivado_ws\DLIC_2020_hw5\DLIC_2020_hw5.xpr
+# Log file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/vivado.log
+# Journal file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.xpr
+open_bd_design {C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd}
+update_compile_order -fileset sources_1

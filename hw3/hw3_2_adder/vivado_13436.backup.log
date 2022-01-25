@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Jul 15 06:58:17 2021
+# Process ID: 13436
+# Current directory: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw3_2_adder
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4568 C:\Users\micha\Documents\Vivado_ws\DLIC_2020_hw3_2_adder\DLIC_2020_hw3_2_adder.xpr
+# Log file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw3_2_adder/vivado.log
+# Journal file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw3_2_adder\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw3_2_adder/DLIC_2020_hw3_2_adder.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/micha/DLIC_2020_hw3_2_adder' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'C:/Users/micha/Documents/Vivado_ws/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'; using path 'C:/Users/micha/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw3_2_adder/DLIC_2020_hw3_2_adder.srcs/sources_1/new'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 842.191 ; gain = 208.094
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Thu Jul 15 06:59:06 2021] Launched synth_1...
+Run output will be captured here: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw3_2_adder/DLIC_2020_hw3_2_adder.runs/synth_1/runme.log
+ipx::package_project -root_dir c:/users/micha/documents/vivado_ws/dlic_2020_hw3_2_adder/dlic_2020_hw3_2_adder.srcs/sources_1/new -vendor xilinx.com -library user -taxonomy /UserIP -force
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 15 07:01:06 2021...

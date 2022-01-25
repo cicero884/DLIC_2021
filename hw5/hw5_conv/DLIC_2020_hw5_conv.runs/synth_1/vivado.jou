@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Sep 27 16:52:08 2021
+# Process ID: 14908
+# Current directory: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.runs/synth_1
+# Command line: vivado.exe -log conv.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source conv.tcl
+# Log file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.runs/synth_1/conv.vds
+# Journal file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source conv.tcl -notrace

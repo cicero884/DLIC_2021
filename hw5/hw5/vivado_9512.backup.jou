@@ -1,0 +1,155 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Jul 15 23:26:22 2021
+# Process ID: 9512
+# Current directory: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9452 C:\Users\micha\Documents\Vivado_ws\DLIC_2020_hw5\DLIC_2020_hw5.xpr
+# Log file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/vivado.log
+# Journal file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.xpr
+open_bd_design {C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd}
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  c:/users/micha/documents/vivado_ws/conv_3x3/conv_3x3.srcs [current_project]
+update_ip_catalog
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:conv:1.0 [get_ips  design_1_conv_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_conv_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+reset_run impl_1 -prev_step 
+open_run impl_1
+open_bd_design {C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd}
+report_ip_status -name ip_status 
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs [current_project]
+update_ip_catalog
+report_ip_status -name ip_status 
+delete_bd_objs [get_bd_nets blk_mem_gen_0_doutb] [get_bd_nets conv_0_M0_R_req] [get_bd_nets conv_0_M1_R_req] [get_bd_nets conv_0_M1_W_req] [get_bd_nets blk_mem_gen_1_doutb] [get_bd_nets conv_0_M0_addr] [get_bd_nets conv_0_M1_addr] [get_bd_nets conv_0_M0_W_req] [get_bd_nets conv_0_M0_W_data] [get_bd_nets conv_0_M1_W_data] [get_bd_cells conv_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:conv:1.0 conv_0
+endgroup
+connect_bd_net [get_bd_pins conv_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_reset] [get_bd_pins conv_0/rst]
+connect_bd_net [get_bd_pins conv_0/M0_R_data] [get_bd_pins conv_0/start]
+delete_bd_objs [get_bd_nets Net1]
+connect_bd_net [get_bd_pins conv_0/M0_R_data] [get_bd_pins processing_system7_0/FCLK_CLK0]
+undo
+connect_bd_net [get_bd_pins conv_0/M0_R_data] [get_bd_pins blk_mem_gen_0/doutb]
+connect_bd_net [get_bd_pins conv_0/M1_R_data] [get_bd_pins blk_mem_gen_1/doutb]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins conv_0/start]
+startgroup
+connect_bd_net [get_bd_pins conv_0/M0_addr] [get_bd_pins blk_mem_gen_0/addrb]
+endgroup
+connect_bd_net [get_bd_pins conv_0/M1_addr] [get_bd_pins blk_mem_gen_1/addrb]
+connect_bd_net [get_bd_pins conv_0/M0_R_req] [get_bd_pins blk_mem_gen_0/enb]
+connect_bd_net [get_bd_pins conv_0/M1_R_req] [get_bd_pins blk_mem_gen_1/enb]
+connect_bd_net [get_bd_pins conv_0/M1_R_req] [get_bd_pins blk_mem_gen_0/web]
+undo
+connect_bd_net [get_bd_pins conv_0/M0_W_req] [get_bd_pins blk_mem_gen_0/web]
+connect_bd_net [get_bd_pins conv_0/M1_W_req] [get_bd_pins blk_mem_gen_1/web]
+connect_bd_net [get_bd_pins conv_0/M0_W_data] [get_bd_pins blk_mem_gen_0/dinb]
+connect_bd_net [get_bd_pins conv_0/M1_W_data] [get_bd_pins blk_mem_gen_1/dinb]
+connect_bd_net [get_bd_pins axi_gpio_1/gpio_io_i] [get_bd_pins axi_cdma_0/cdma_introut]
+undo
+connect_bd_net [get_bd_pins axi_gpio_1/gpio_io_i] [get_bd_pins conv_0/finish]
+save_bd_design
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+delete_bd_objs [get_bd_nets Net]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins conv_0/rst]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins blk_mem_gen_0/rstb]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins blk_mem_gen_1/rstb]
+save_bd_design
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+delete_bd_objs [get_bd_nets rst_ps7_0_100M_peripheral_aresetn]
+connect_bd_net [get_bd_pins blk_mem_gen_1/rstb] [get_bd_pins rst_ps7_0_100M/peripheral_reset]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_reset] [get_bd_pins blk_mem_gen_0/rstb]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins conv_0/rst]
+connect_bd_net [get_bd_pins axi_bram_ctrl_1/s_axi_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axi_cdma_0/s_axi_lite_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+save_bd_design
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axi_interconnect_0/M02_ARESETN]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axi_interconnect_0/M01_ARESETN]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axi_interconnect_0/M00_ARESETN]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axi_interconnect_0/S00_ARESETN]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axi_interconnect_0/ARESETN]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axi_interconnect_1/ARESETN]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axi_interconnect_1/S00_ARESETN]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axi_interconnect_1/M00_ARESETN]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axi_interconnect_1/M01_ARESETN]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axi_interconnect_1/M02_ARESETN]
+save_bd_design
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+report_ip_status -name ip_status 
+open_run synth_1 -name synth_1
+open_bd_design {C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:conv:1.0 [get_ips  design_1_conv_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_conv_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.ip_user_files -ipstatic_source_dir C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.cache/compile_simlib/modelsim} {questa=C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.cache/compile_simlib/questa} {riviera=C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.cache/compile_simlib/riviera} {activehdl=C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+report_ip_status -name ip_status 
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+refresh_design
+open_bd_design {C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:conv:1.0 [get_ips  design_1_conv_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_conv_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.ip_user_files -ipstatic_source_dir C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.cache/compile_simlib/modelsim} {questa=C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.cache/compile_simlib/questa} {riviera=C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.cache/compile_simlib/riviera} {activehdl=C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+report_ip_status -name ip_status 
+refresh_design
+open_bd_design {C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:conv:1.0 [get_ips  design_1_conv_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_conv_0_1] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+refresh_design
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_bd_design {C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.srcs/sources_1/bd/design_1/design_1.bd}
+write_bd_tcl -force C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/hw5.tcl
+file copy -force C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/DLIC_2020_hw5.runs/impl_1/design_1_wrapper.bit C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5/hw5.bit

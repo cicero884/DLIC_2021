@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Jul 15 07:12:22 2021
+# Process ID: 18020
+# Current directory: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1356 C:\Users\micha\Documents\Vivado_ws\DLIC_2020_hw4\DLIC_2020_hw4.xpr
+# Log file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw4/vivado.log
+# Journal file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw4/DLIC_2020_hw4.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw4/DLIC_2020_hw4.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+write_bd_tcl -force C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw4/hw4.tcl
+file copy -force C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw4/DLIC_2020_hw4.runs/impl_1/design_1_wrapper.bit C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw4/hw4.bit

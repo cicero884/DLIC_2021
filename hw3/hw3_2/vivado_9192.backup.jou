@@ -1,0 +1,156 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Oct 27 23:27:30 2020
+# Process ID: 9192
+# Current directory: C:/Users/micha/DLIC_2020_hw3_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8940 C:\Users\micha\DLIC_2020_hw3_2\DLIC_2020_hw3_2.xpr
+# Log file: C:/Users/micha/DLIC_2020_hw3_2/vivado.log
+# Journal file: C:/Users/micha/DLIC_2020_hw3_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/micha/DLIC_2020_hw3_2/DLIC_2020_hw3_2.xpr
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  C:/Users/micha/DLIC_2020_hw3_2_adder/DLIC_2020_hw3_2_adder.srcs/sources_1/new [current_project]
+update_ip_catalog
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:adder_2b:1.0 adder_2b_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property location {2 398 -188} [get_bd_cells axi_gpio_0]
+set_property location {2 689 -285} [get_bd_cells adder_2b_0]
+set_property location {1 230 -385} [get_bd_cells processing_system7_0]
+set_property location {1 355 -420} [get_bd_cells processing_system7_0]
+set_property location {1 349 -406} [get_bd_cells processing_system7_0]
+set_property location {1 346 -395} [get_bd_cells processing_system7_0]
+delete_bd_objs [get_bd_cells axi_gpio_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property location {1 -1 -274} [get_bd_cells axi_gpio_0]
+set_property location {2 329 -215} [get_bd_cells axi_gpio_0]
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+set_property -dict [list CONFIG.C_GPIO_WIDTH {4} CONFIG.C_GPIO2_WIDTH {4} CONFIG.C_IS_DUAL {1} CONFIG.C_ALL_INPUTS {1}] [get_bd_cells axi_gpio_0]
+add_files -fileset constrs_1 -norecurse {{C:/Users/micha/Desktop/PYNQ/pynq-z2_v1.0.xdc/PYNQ-Z2 v1.0.xdc}}
+import_files -fileset constrs_1 {{C:/Users/micha/Desktop/PYNQ/pynq-z2_v1.0.xdc/PYNQ-Z2 v1.0.xdc}}
+export_ip_user_files -of_objects  [get_files C:/Users/micha/DLIC_2020_hw3_2/DLIC_2020_hw3_2.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet
+remove_files  C:/Users/micha/DLIC_2020_hw3_2/DLIC_2020_hw3_2.srcs/sources_1/bd/design_1/design_1.bd
+file delete -force C:/Users/micha/DLIC_2020_hw3_2/DLIC_2020_hw3_2.srcs/sources_1/bd/design_1
+create_bd_design "design_1"
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property location {1 102 -295} [get_bd_cells axi_gpio_0]
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  C:/Users/micha/DLIC_2020_hw3_2_adder/DLIC_2020_hw3_2_adder.srcs/sources_1/new [current_project]
+update_ip_catalog
+delete_bd_objs [get_bd_cells axi_gpio_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:adder_2b:1.0 adder_2b_0
+endgroup
+set_property location {1 69 -445} [get_bd_cells adder_2b_0]
+export_ip_user_files -of_objects  [get_files C:/Users/micha/DLIC_2020_hw3_2/DLIC_2020_hw3_2.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet
+remove_files  C:/Users/micha/DLIC_2020_hw3_2/DLIC_2020_hw3_2.srcs/sources_1/bd/design_1/design_1.bd
+file delete -force C:/Users/micha/DLIC_2020_hw3_2/DLIC_2020_hw3_2.srcs/sources_1/bd/design_1
+set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+create_bd_design "design_1"
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:adder_2b:1.0 adder_2b_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property -dict [list CONFIG.C_GPIO_WIDTH {4} CONFIG.C_GPIO2_WIDTH {4} CONFIG.C_IS_DUAL {1} CONFIG.C_ALL_INPUTS {1} CONFIG.GPIO2_BOARD_INTERFACE {leds_4bits}] [get_bd_cells axi_gpio_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins adder_2b_0/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_0/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {Custom} Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {leds_4bits ( 4 LEDs ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO2]
+endgroup
+delete_bd_objs [get_bd_intf_nets axi_gpio_0_GPIO]
+delete_bd_objs [get_bd_intf_ports gpio_rtl]
+set_property location {3 879 -551} [get_bd_cells axi_gpio_0]
+set_property location {1 300 -379} [get_bd_cells processing_system7_0]
+set_property location {3 1225 -366} [get_bd_cells ps7_0_axi_periph]
+set_property location {3.5 1475 -403} [get_bd_cells axi_gpio_0]
+set_property location {4 1445 -238} [get_bd_cells adder_2b_0]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins adder_2b_0/out_4b]
+startgroup
+make_bd_pins_external  [get_bd_pins adder_2b_0/in_4b]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adder_2b_0/sw0]
+endgroup
+set_property name btn [get_bd_ports in_4b_0]
+set_property name sw [get_bd_ports sw0_0]
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+make_wrapper -files [get_files C:/Users/micha/DLIC_2020_hw3_2/DLIC_2020_hw3_2.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse C:/Users/micha/DLIC_2020_hw3_2/DLIC_2020_hw3_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+close_design
+write_bd_tcl -force C:/Users/micha/DLIC_2020_hw3_2/design_1.tcl
+open_run synth_1 -name synth_1
+close_design
+open_run impl_1
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+close_design
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {btn[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {btn[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {btn[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {btn[3]}]]
+set_property package_pin "" [get_ports [list  {btn[0]}]]
+place_ports {btn[0]} D19
+place_ports {btn[1]} D20
+set_property package_pin "" [get_ports [list  {btn[2]}]]
+set_property package_pin "" [get_ports [list  {btn[3]}]]
+place_ports {btn[2]} L20
+place_ports {btn[3]} L19
+set_property package_pin "" [get_ports [list  sw]]
+place_ports sw M20
+set_property IOSTANDARD LVCMOS33 [get_ports [list sw]]
+set_property target_constrs_file {C:/Users/micha/DLIC_2020_hw3_2/DLIC_2020_hw3_2.srcs/constrs_1/imports/pynq-z2_v1.0.xdc/PYNQ-Z2 v1.0.xdc} [current_fileset -constrset]
+save_constraints -force
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list sw]]
+place_ports sw M20
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+file copy -force C:/Users/micha/DLIC_2020_hw3_2/DLIC_2020_hw3_2.runs/impl_1/design_1_wrapper.bit C:/Users/micha/DLIC_2020_hw3_2/hw3_2.bit
+open_bd_design {C:/Users/micha/DLIC_2020_hw3_2/DLIC_2020_hw3_2.srcs/sources_1/bd/design_1/design_1.bd}
+write_bd_tcl -force C:/Users/micha/DLIC_2020_hw3_2/hw3_2.tcl

@@ -1,0 +1,710 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Sep 27 16:52:08 2021
+# Process ID: 14908
+# Current directory: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.runs/synth_1
+# Command line: vivado.exe -log conv.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source conv.tcl
+# Log file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.runs/synth_1/conv.vds
+# Journal file: C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source conv.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/micha/Documents/Documents/Vivado_ws/conv_3x3/conv_3x3.srcs'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.cache/ip 
+Command: synth_design -top conv -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 21740 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 474.852 ; gain = 182.184
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'conv' [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/conv.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ctrl' [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/ctrl.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ctrl' (1#1) [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dp' [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/dp.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'dp' (2#1) [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/dp.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'conv' (3#1) [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/conv.v:3]
+WARNING: [Synth 8-3917] design conv has port M0_addr[1] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_addr[0] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M1_addr[1] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M1_addr[0] driven by constant 0
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[31]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[30]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[29]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[28]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[27]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[26]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[25]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[24]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[23]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[22]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[21]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[20]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[19]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[18]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[17]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[16]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[15]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[14]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[13]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[12]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[11]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[10]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[9]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[8]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[7]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[6]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[5]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[4]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[3]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[2]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[1]
+WARNING: [Synth 8-3331] design dp has unconnected port M1_R_data[0]
+WARNING: [Synth 8-3331] design ctrl has unconnected port fb_flags[5]
+WARNING: [Synth 8-3331] design ctrl has unconnected port fb_flags[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 537.988 ; gain = 245.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 537.988 ; gain = 245.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 537.988 ; gain = 245.320
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/dp.v:134]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 537.988 ; gain = 245.320
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 8     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 23    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Multipliers : 
+	                32x32  Multipliers := 9     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	  11 Input     32 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 17    
+	  10 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module dp 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 8     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 23    
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Multipliers : 
+	                32x32  Multipliers := 9     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	  11 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+	  10 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/dp.v:130]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/dp.v:129]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/dp.v:128]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/dp.v:127]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/dp.v:126]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/dp.v:125]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/dp.v:124]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/dp.v:123]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/dp.v:122]
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A2*B''.
+DSP Report: register ul_dp/buff_reg[1] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[0] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/buff_reg[1] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[0] is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A''*B2.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A2*B''.
+DSP Report: register ul_dp/buff_reg[2] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[1] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/buff_reg[2] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[1] is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A''*B2.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A2*B''.
+DSP Report: register ul_dp/buff_reg[3] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[2] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/buff_reg[3] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[2] is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A''*B2.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A2*B''.
+DSP Report: register ul_dp/buff_reg[4] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[3] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/buff_reg[4] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[3] is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A''*B2.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A2*B''.
+DSP Report: register ul_dp/buff_reg[5] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[4] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/buff_reg[5] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[4] is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A''*B2.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A2*B''.
+DSP Report: register ul_dp/buff_reg[6] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[5] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/buff_reg[6] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[5] is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A''*B2.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A2*B''.
+DSP Report: register ul_dp/buff_reg[7] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[6] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/buff_reg[7] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/buff_reg[6] is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A''*B2.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A2*B2.
+DSP Report: register ul_dp/buff_reg[7] is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register ul_dp/buff_reg[7] is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A''*B2.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A2*B.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: A2*B2.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: Generating DSP ul_dp/raw0, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+DSP Report: operator ul_dp/raw0 is absorbed into DSP ul_dp/raw0.
+WARNING: [Synth 8-3917] design conv has port M0_addr[1] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_addr[0] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M1_addr[1] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M1_addr[0] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_req[3] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_req[2] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_req[1] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_req[0] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[31] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[30] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[29] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[28] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[27] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[26] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[25] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[24] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[23] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[22] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[21] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[20] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[19] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[18] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[17] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[16] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[15] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[14] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[13] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[12] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[11] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[10] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[9] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[8] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[7] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[6] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[5] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[4] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[3] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[2] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[1] driven by constant 0
+WARNING: [Synth 8-3917] design conv has port M0_W_data[0] driven by constant 0
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[31]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[30]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[29]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[28]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[27]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[26]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[25]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[24]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[23]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[22]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[21]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[20]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[19]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[18]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[17]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[16]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[15]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[14]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[13]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[12]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[11]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[10]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[9]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[8]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[7]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[6]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[5]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[4]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[3]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[2]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[1]
+WARNING: [Synth 8-3331] design conv has unconnected port M1_R_data[0]
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_W_req_reg[0]' (FDRE) to 'ul_dp/M1_W_req_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_W_req_reg[1]' (FDRE) to 'ul_dp/M1_W_req_reg[2]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_W_req_reg[2]' (FDRE) to 'ul_dp/M1_W_req_reg[3]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_W_req_reg[3]' (FDRE) to 'ul_dp/M1_R_req_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ul_dp/M1_addr_reg[10] )
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[11]' (FDRE) to 'ul_dp/M1_addr_reg[12]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[12]' (FDRE) to 'ul_dp/M1_addr_reg[13]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[13]' (FDRE) to 'ul_dp/M1_addr_reg[14]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[14]' (FDRE) to 'ul_dp/M1_addr_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[15]' (FDRE) to 'ul_dp/M1_addr_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[16]' (FDRE) to 'ul_dp/M1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[17]' (FDRE) to 'ul_dp/M1_addr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[18]' (FDRE) to 'ul_dp/M1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[19]' (FDRE) to 'ul_dp/M1_addr_reg[20]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[20]' (FDRE) to 'ul_dp/M1_addr_reg[21]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[21]' (FDRE) to 'ul_dp/M1_addr_reg[22]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[22]' (FDRE) to 'ul_dp/M1_addr_reg[23]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[23]' (FDRE) to 'ul_dp/M1_addr_reg[24]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[24]' (FDRE) to 'ul_dp/M1_addr_reg[25]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[25]' (FDRE) to 'ul_dp/M1_addr_reg[26]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[26]' (FDRE) to 'ul_dp/M1_addr_reg[27]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[27]' (FDRE) to 'ul_dp/M1_addr_reg[28]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M1_addr_reg[28]' (FDRE) to 'ul_dp/M1_addr_reg[29]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ul_dp/M1_addr_reg[29] )
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[10]' (FDRE) to 'ul_dp/M0_addr_reg[11]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[11]' (FDRE) to 'ul_dp/M0_addr_reg[12]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[12]' (FDRE) to 'ul_dp/M0_addr_reg[13]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[13]' (FDRE) to 'ul_dp/M0_addr_reg[14]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[14]' (FDRE) to 'ul_dp/M0_addr_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[15]' (FDRE) to 'ul_dp/M0_addr_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[16]' (FDRE) to 'ul_dp/M0_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[17]' (FDRE) to 'ul_dp/M0_addr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[18]' (FDRE) to 'ul_dp/M0_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[19]' (FDRE) to 'ul_dp/M0_addr_reg[20]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[20]' (FDRE) to 'ul_dp/M0_addr_reg[21]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[21]' (FDRE) to 'ul_dp/M0_addr_reg[22]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[22]' (FDRE) to 'ul_dp/M0_addr_reg[23]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[23]' (FDRE) to 'ul_dp/M0_addr_reg[24]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[24]' (FDRE) to 'ul_dp/M0_addr_reg[25]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[25]' (FDRE) to 'ul_dp/M0_addr_reg[26]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[26]' (FDRE) to 'ul_dp/M0_addr_reg[27]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[27]' (FDRE) to 'ul_dp/M0_addr_reg[28]'
+INFO: [Synth 8-3886] merging instance 'ul_dp/M0_addr_reg[28]' (FDRE) to 'ul_dp/M0_addr_reg[29]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ul_dp/M0_addr_reg[29] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 722.285 ; gain = 429.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|conv        | A2*B''           | 18     | 15     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 15     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A''*B2           | 18     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A2*B''           | 18     | 15     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 15     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A''*B2           | 18     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A2*B''           | 18     | 15     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 15     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A''*B2           | 18     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A2*B''           | 18     | 15     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 15     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A''*B2           | 18     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A2*B''           | 18     | 15     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 15     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A''*B2           | 18     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A2*B''           | 18     | 15     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 15     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A''*B2           | 18     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A2*B''           | 18     | 15     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 15     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A''*B2           | 18     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A2*B2            | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A2*B  | 15     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A''*B2           | 18     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A''*B | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A2*B             | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A*B   | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|conv        | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|conv        | (PCIN>>17)+A2*B  | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 727.645 ; gain = 434.977
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 727.832 ; gain = 435.164
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 728.656 ; gain = 435.988
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 728.656 ; gain = 435.988
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 728.656 ; gain = 435.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 728.656 ; gain = 435.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 728.656 ; gain = 435.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 728.656 ; gain = 435.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    88|
+|3     |DSP48E1 |    36|
+|4     |LUT1    |     4|
+|5     |LUT2    |   299|
+|6     |LUT3    |    10|
+|7     |LUT4    |    18|
+|8     |LUT5    |   111|
+|9     |LUT6    |   105|
+|10    |MUXF7   |    13|
+|11    |MUXF8   |     4|
+|12    |FDCE    |    15|
+|13    |FDPE    |     1|
+|14    |FDRE    |   383|
+|15    |IBUF    |    35|
+|16    |OBUF    |   139|
++------+--------+------+
+
+Report Instance Areas: 
++------+----------+-------+------+
+|      |Instance  |Module |Cells |
++------+----------+-------+------+
+|1     |top       |       |  1262|
+|2     |  ul_ctrl |ctrl   |   138|
+|3     |  ul_dp   |dp     |   949|
++------+----------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 728.656 ; gain = 435.988
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 110 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 728.656 ; gain = 435.988
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 728.656 ; gain = 435.988
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 141 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 835.195 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+72 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 835.195 ; gain = 542.527
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 835.195 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/micha/Documents/Vivado_ws/DLIC_2020_hw5_conv/DLIC_2020_hw5_conv.runs/synth_1/conv.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file conv_utilization_synth.rpt -pb conv_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 27 16:52:27 2021...

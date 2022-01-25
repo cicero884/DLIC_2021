@@ -1,0 +1,8 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"top_tb_func_synth.v" \
+"../../../../../DLIC_2020_hw5_conv.srcs/sources_1/imports/Downloads/bram_sim.v" \
+"../../../../../DLIC_2020_hw5_conv.srcs/sim_1/imports/Downloads/conv_tb.v" \
+
+# Do not sort compile order
+nosort
