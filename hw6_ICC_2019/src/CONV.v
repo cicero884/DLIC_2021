@@ -31,6 +31,10 @@ module CONV (
 
 // counter & stage
 //enum [1:0]bit {CONV=2'd2,POOL=2'd1,FLAT=2'd0} stage;
+localparam IDLE=2'd3;
+localparam CONV=2'd2;
+localparam POOL=2'd1;
+localparam FLAT=2'd0;
 reg [1:0] stage;
 reg [19:0]tmp[2:0][2:0];
 reg sync_req;
@@ -42,7 +46,7 @@ reg [1:0]reg_MAX;
 assign r_last=(reg_row==reg_MAX&&reg_col==reg_MAX);
 always @(posedge clk,posedge reset) begin
 	if(reset) begin
-		stage<=2'd3;
+		stage<=IDLE;
 		sync_req<=1'b0;
 		is_kernel0<=1'b0;
 		caddr_wr<=12'd0;
@@ -51,9 +55,9 @@ always @(posedge clk,posedge reset) begin
 	end
 	else begin
 		case(stage)
-			2'd3:begin
+			IDLE:begin
 				if(ready) begin
-					stage<=2'd2;
+					stage<=CONV;
 					sync_req<=1'b1;
 				end
 				else begin
@@ -64,7 +68,7 @@ always @(posedge clk,posedge reset) begin
 					cwr<=1'b0;
 				end
 			end
-			2'd2:begin
+			CONV:begin
 				busy<=1'b1;
 				case(1'b1)
 					r_last:begin //prepare write ker0;
@@ -78,7 +82,7 @@ always @(posedge clk,posedge reset) begin
 					end
 					sync_req:begin
 						if(caddr_wr=={~12'd0}) begin
-							stage<=2'd1;
+							stage<=POOL;
 							sync_req<=1'b1;
 						end
 						if(cwr) caddr_wr<=caddr_wr+1; //prevent increase on entering
@@ -87,7 +91,7 @@ always @(posedge clk,posedge reset) begin
 					end
 				endcase
 			end
-			2'd1:begin
+			POOL:begin
 				case(1'b1)
 					r_last:begin
 						sync_req<=1'b1;
@@ -96,7 +100,7 @@ always @(posedge clk,posedge reset) begin
 					sync_req:begin
 						if(caddr_wr=={2'd0,{~10'd0}}) begin
 							is_kernel0<=~is_kernel0;
-							if(is_kernel0) stage<=2'd0;
+							if(is_kernel0) stage<=FLAT;
 							caddr_wr<=12'd0;
 						end
 						else if(cwr) caddr_wr<=caddr_wr+1;
@@ -105,7 +109,7 @@ always @(posedge clk,posedge reset) begin
 					end
 				endcase
 			end
-			2'd0:begin
+			FLAT:begin
 				case(1'b1)
 					r_last:begin
 						sync_req<=1'b1;
@@ -115,7 +119,7 @@ always @(posedge clk,posedge reset) begin
 						if(caddr_wr=={1'd0,{~11'd0}}) begin
 							busy<=1'b0;
 							cwr<=1'b0;
-							stage<=2'd3;
+							stage<=IDLE;
 						end
 						else if(cwr) caddr_wr<=caddr_wr+21'd1;
 						sync_req<=1'b0;
@@ -150,7 +154,7 @@ always @(posedge clk,posedge reset) begin
 				else reg_col<=reg_col+1;
 
 				if(out_border) tmp[reg_row][reg_col]<=20'd0;
-				else tmp[reg_row][reg_col]<=(stage==2'd2)? idata:cdata_rd;
+				else tmp[reg_row][reg_col]<=(stage==CONV)? idata:cdata_rd;
 			end
 		endcase
 	end
@@ -161,21 +165,21 @@ assign tmp_ans=(is_kernel0)? `KER0_CONV:`KER1_CONV;
 assign iaddr=caddr_rd;
 always @(*) begin
 	case(stage)
-		2'd2: begin
+		CONV: begin
 			caddr_rd={caddr_wr[11:6]+{4'd0,reg_row}-6'd1,caddr_wr[5:0]+{4'd0,reg_col}-6'd1};
 			out_border=((caddr_wr[5:0]==0&&reg_col==0)||(caddr_wr[5:0]==`SIDE_MAX&&reg_col==2'd2)||(caddr_wr[11:6]==0&&reg_row==0)||(caddr_wr[11:6]==`SIDE_MAX&&reg_row==2'd2));
 			reg_MAX=2'd2;
 			cdata_wr=(tmp_ans[39])? 20'd0:tmp_ans[35:16]+tmp_ans[15];//RELU+round
 			csel=(is_kernel0)? 3'b001:3'b010;
 		end
-		2'd1: begin
+		POOL: begin
 			caddr_rd={{caddr_wr[9:5],1'b0}+reg_row,{caddr_wr[4:0],1'b0}+reg_col};
 			out_border=1'b0;
 			reg_MAX=2'd1;
 			cdata_wr=`MAX_2(`MAX_2(tmp[0][0],tmp[0][1]),`MAX_2(tmp[1][0],tmp[1][1]));
 			csel=(crd)? ((is_kernel0)? 3'b001:3'b010):((is_kernel0)? 3'b011:3'b100);
 		end
-		2'd0: begin
+		FLAT: begin
 			caddr_rd={caddr_wr[10:6],caddr_wr[5:1]};
 			out_border=1'b0;
 			reg_MAX=2'd0;
